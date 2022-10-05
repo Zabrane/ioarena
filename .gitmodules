@@ -19,7 +19,7 @@
 	url = https://github.com/pmwkaa/sophia
 [submodule "db/mdbx"]
 	path = db/mdbx
-	url = https://gitflic.ru/project/erthink/libmdbx.git
+	url = https://github.com/aleksraiden/libmdbx.git
 [submodule "db/vedis"]
 	path = db/vedis
 	url = https://github.com/symisc/vedis.git
@@ -29,6 +29,9 @@
 [submodule "db/upscaledb"]
 	path = db/upscaledb
 	url = https://github.com/cruppstahl/upscaledb.git
+[submodule "db/sqlite3"]
+	path = db/sqlite3
+	url = https://github.com/sqlite/sqlite.git
 [submodule "db/unqlite"]
 	path = db/unqlite
 	url = https://github.com/symisc/unqlite.git
