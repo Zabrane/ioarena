@@ -59,7 +59,8 @@ Build
 -----
 
 ```sh
-git clone --recursive https://github.com/pmwkaa/ioarena
+git clone --recursive https://github.com/Zabrane/ioarena.git
+cd ioarena
 ```
 
 **cmake** is required for building.
