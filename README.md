@@ -58,9 +58,10 @@ example:
 Build
 -----
 
-```sh
+```bash
 sudo apt update
 sudo apt install build-essential
+sudo apt install libtool
 sudo apt install automake autoconf
 sudo apt install cmake
 sudo apt install libsqlite3-dev
@@ -74,8 +75,8 @@ cd ioarena
 To enable a specific database driver, pass -DENABLE\_**NAME**=ON to cmake.
 If a specified database is not installed in system, it will be build from db/*name* directory.
 
-```sh
-Edit runme.sh
+```bash
+## Edit "runme.sh" to enable/disable backends, then:
 ./runme.sh
 ./@BUILD/src/ioarena -h
 ```
