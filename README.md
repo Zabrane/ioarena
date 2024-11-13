@@ -68,11 +68,9 @@ To enable a specific database driver, pass -DENABLE\_**NAME**=ON to cmake.
 If a specified database is not installed in system, it will be build from db/*name* directory.
 
 ```sh
-mkdir build
-cd build
-cmake .. -DENABLE_ROCKSDB=ON
-make
-src/ioarena -h
+Edit runme.sh
+./runme.sh
+./@BUILD/src/ioarena -h
 ```
 
 Authors
