@@ -14,16 +14,16 @@ echo "*** run cmake..."
 ## https://stackoverflow.com/a/59314670
 mkdir -p $DIR && \
 	(cd $DIR && cmake -DCMAKE_BUILD_TYPE=Release .. \
-	-DENABLE_ROCKSDB=OFF \
-	-DENABLE_FORESTDB=OFF \
 	-DENABLE_SOPHIA=ON \
-	-DENABLE_WIREDTIGER=OFF \
+	-DENABLE_WIREDTIGER=ON \
 	-DENABLE_LMDB=ON \
 	-DENABLE_MDBX=ON \
 	-DENABLE_LEVELDB=ON \
 	-DENABLE_SQLITE3=ON \
 	-DENABLE_VEDISDB=ON \
 	-DENABLE_IOWOW=ON \
+ 	-DENABLE_ROCKSDB=OFF \
+	-DENABLE_FORESTDB=OFF \
 	) || exit 1
 
 echo "*** run make..."
