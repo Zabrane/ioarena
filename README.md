@@ -59,6 +59,9 @@ Build
 -----
 
 ```sh
+sudo apt-get update && sudo apt-get install build-essential
+sudo apt install cmake
+sudo apt install libsqlite3-dev
 git clone --recursive https://github.com/Zabrane/ioarena.git
 cd ioarena
 ```
