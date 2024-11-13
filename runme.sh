@@ -10,18 +10,20 @@ git submodule foreach --recursive 'git clean -x -f -d'
 
 DIR=@BUILD
 echo "*** run cmake..."
+## What are CMAKE_BUILD_TYPE: Debug, Release, RelWithDebInfo and MinSizeRel?
+## https://stackoverflow.com/a/59314670
 mkdir -p $DIR && \
-	(cd $DIR && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo .. \
+	(cd $DIR && cmake -DCMAKE_BUILD_TYPE=Release .. \
 	-DENABLE_ROCKSDB=OFF \
 	-DENABLE_FORESTDB=OFF \
-	-DENABLE_SOPHIA=OFF \
+	-DENABLE_SOPHIA=ON \
 	-DENABLE_WIREDTIGER=OFF \
 	-DENABLE_LMDB=ON \
 	-DENABLE_MDBX=ON \
 	-DENABLE_LEVELDB=ON \
 	-DENABLE_SQLITE3=ON \
-	-DENABLE_VEDISDB=OFF \
-	-DENABLE_IOWOW=OFF \
+	-DENABLE_VEDISDB=ON \
+	-DENABLE_IOWOW=ON \
 	) || exit 1
 
 echo "*** run make..."
