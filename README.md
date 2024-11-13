@@ -22,10 +22,36 @@ Supported databases: **rocksdb**, **leveldb**, **forestdb**, **upscaledb**, **lm
 
 *New drivers or any kind of enhancements are very welcome!*
 
+Build
+-----
+
+```bash
+sudo apt update
+sudo apt install build-essential
+sudo apt install libtool
+sudo apt install automake autoconf
+sudo apt install cmake
+sudo apt install libsqlite3-dev
+
+git clone --recursive https://github.com/Zabrane/ioarena.git
+cd ioarena
+```
+
+**cmake** is required for building.
+
+To enable a specific database driver, pass -DENABLE\_**NAME**=ON to cmake.
+If a specified database is not installed in system, it will be build from db/*name* directory.
+
+```bash
+## Edit "runme.sh" to enable/disable backends, then:
+./runme.sh
+./@BUILD/src/ioarena -h
+```
+
 Usage
 -----
 
-```sh
+```bash
 IOARENA (embedded storage benchmarking)
 
 usage: ioarena [hDBCpnkvmlrwic]
@@ -51,34 +77,9 @@ usage: ioarena [hDBCpnkvmlrwic]
   -i ignore key-not-found error      (default: no)
   -h                                 help
 
-example:
-   ioarena -m sync -D sophia -B crud -n 100000000
-```
-
-Build
------
-
-```bash
-sudo apt update
-sudo apt install build-essential
-sudo apt install libtool
-sudo apt install automake autoconf
-sudo apt install cmake
-sudo apt install libsqlite3-dev
-
-git clone --recursive https://github.com/Zabrane/ioarena.git
-cd ioarena
-```
-
-**cmake** is required for building.
-
-To enable a specific database driver, pass -DENABLE\_**NAME**=ON to cmake.
-If a specified database is not installed in system, it will be build from db/*name* directory.
-
-```bash
-## Edit "runme.sh" to enable/disable backends, then:
-./runme.sh
-./@BUILD/src/ioarena -h
+Example:
+   ioarena -i -m sync -D sophia -B crud -n 100000000
+   ioarena -i -m sync -D lmdb   -B get  -n 10000
 ```
 
 Authors
