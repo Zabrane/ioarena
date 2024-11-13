@@ -59,8 +59,9 @@ Build
 -----
 
 ```sh
-sudo apt-get update
-sudo apt-get install build-essential
+sudo apt update
+sudo apt install build-essential
+sudo apt install automake autoconf
 sudo apt install cmake
 sudo apt install libsqlite3-dev
 
