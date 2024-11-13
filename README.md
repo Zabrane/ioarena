@@ -78,8 +78,8 @@ usage: ioarena [hDBCpnkvmlrwic]
   -h                                 help
 
 Example:
-   ioarena -i -m sync -D sophia -B crud -n 100000000
-   ioarena -i -m sync -D lmdb   -B get  -n 10000
+   ioarena -m sync -D sophia -B crud -n 100000000
+   ioarena -i -m sync -D lmdb -B get -n 100000 | grep -v "error: key"
 ```
 
 Authors
